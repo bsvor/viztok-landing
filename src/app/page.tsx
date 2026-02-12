@@ -64,15 +64,15 @@ export default function Home() {
         {/* Mock Video Grid Preview */}
         <div className="max-w-6xl mx-auto mt-16 grid grid-cols-2 md:grid-cols-4 gap-3">
           {[
-            { id: "1", title: "Neon Drift", genre: "Sci-Fi", rating: "9.2" },
-            { id: "2", title: "The Last Signal", genre: "Thriller", rating: "8.7" },
-            { id: "3", title: "Pixel Hearts", genre: "Romance", rating: "8.9" },
-            { id: "4", title: "Void Walker", genre: "Mystery", rating: "9.0" },
+            { id: "1", title: "Neon Drift", genre: "Sci-Fi", rating: "9.2", gradient: "from-cyan/30 via-teal/20 to-navy", description: "In a rain-soaked megacity, a rogue courier discovers her cybernetic implant is broadcasting a signal that could unravel the corporate oligarchy." },
+            { id: "2", title: "The Last Signal", genre: "Thriller", rating: "8.7", gradient: "from-red-900/40 via-red-950/20 to-navy", description: "A deep-space communications officer picks up an impossibly old transmission from beyond the known universe." },
+            { id: "3", title: "Pixel Hearts", genre: "Romance", rating: "8.9", gradient: "from-pink-900/40 via-purple-950/20 to-navy", description: "Two rival game developers meet anonymously in a virtual world they each helped build." },
+            { id: "4", title: "Void Walker", genre: "Mystery", rating: "9.0", gradient: "from-indigo-900/40 via-indigo-950/20 to-navy", description: "Researchers at a quantum physics lab begin vanishing one by one, each leaving behind only a journal entry about a door that shouldn't exist." },
           ].map((show) => (
             <a
               key={show.title}
               href={`https://app.viztok.com/watch/${show.id}`}
-              className="relative group rounded-xl overflow-hidden bg-gradient-to-br from-teal/20 to-navy border border-white/10 aspect-[2/3] flex flex-col justify-end p-4 hover:border-cyan/50 transition-colors cursor-pointer"
+              className={`relative group rounded-xl overflow-hidden bg-gradient-to-br ${show.gradient} border border-white/10 aspect-[2/3] flex flex-col justify-end p-4 hover:border-cyan/50 transition-colors cursor-pointer`}
             >
               <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/50 to-transparent" />
               <div className="relative">
@@ -82,10 +82,23 @@ export default function Home() {
                 <h3 className="font-heading text-lg font-bold mt-1">
                   {show.title}
                 </h3>
+                <p className="text-[11px] text-light/40 mt-1 line-clamp-2 md:hidden">
+                  {show.description}
+                </p>
                 <div className="flex items-center gap-2 mt-2 text-sm text-light/60">
                   <span className="text-cyan font-semibold">{show.rating}</span>
                   <span>AI Rated</span>
                 </div>
+              </div>
+              {/* Hover description overlay (desktop) */}
+              <div className="absolute inset-0 bg-navy/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:flex flex-col justify-center p-5">
+                <span className="text-[10px] text-cyan font-semibold uppercase tracking-wider mb-1">
+                  {show.genre}
+                </span>
+                <h3 className="font-heading text-base font-bold mb-3">{show.title}</h3>
+                <p className="text-sm text-light/60 leading-relaxed line-clamp-6">
+                  {show.description}
+                </p>
               </div>
             </a>
           ))}
@@ -469,15 +482,15 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               {[
-                { id: "5", title: "The Algorithm", genre: "Sci-Fi", length: "1h 42m", rating: "9.4" },
-                { id: "6", title: "Echoes of Tomorrow", genre: "Drama", length: "1h 28m", rating: "9.1" },
-                { id: "7", title: "Signal Lost", genre: "Thriller", length: "1h 55m", rating: "8.8" },
-                { id: "8", title: "The Dreaming City", genre: "Fantasy", length: "2h 10m", rating: "9.3" },
+                { id: "5", title: "The Algorithm", genre: "Sci-Fi", length: "1h 42m", rating: "9.4", gradient: "from-cyan/30 via-teal/20 to-navy", description: "When a frontier AI begins writing its own source code, an ethics team races to understand its intentions before a government shutdown order takes effect." },
+                { id: "6", title: "Echoes of Tomorrow", genre: "Drama", length: "1h 28m", rating: "9.1", gradient: "from-amber-900/40 via-amber-950/20 to-navy", description: "A family receives holographic messages from future versions of themselves, each warning of a different catastrophe." },
+                { id: "7", title: "Signal Lost", genre: "Thriller", length: "1h 55m", rating: "8.8", gradient: "from-red-900/40 via-red-950/20 to-navy", description: "A submarine crew loses all communication during a deep-sea mission and surfaces to find they have been erased from every database on Earth." },
+                { id: "8", title: "The Dreaming City", genre: "Fantasy", length: "2h 10m", rating: "9.3", gradient: "from-violet-900/40 via-purple-950/20 to-navy", description: "An architect discovers that her blueprints are manifesting as real places in a parallel dream dimension." },
               ].map((film) => (
                 <a
                   key={film.title}
                   href={`https://app.viztok.com/watch/${film.id}`}
-                  className="relative rounded-xl overflow-hidden bg-gradient-to-br from-teal/20 to-navy border border-white/10 aspect-[3/4] flex flex-col justify-end p-4 hover:border-cyan/50 transition-colors cursor-pointer"
+                  className={`relative group rounded-xl overflow-hidden bg-gradient-to-br ${film.gradient} border border-white/10 aspect-[3/4] flex flex-col justify-end p-4 hover:border-cyan/50 transition-colors cursor-pointer`}
                 >
                   <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/60 to-transparent" />
                   <div className="relative">
@@ -487,10 +500,23 @@ export default function Home() {
                     <h3 className="font-heading text-base font-bold mt-1">
                       {film.title}
                     </h3>
+                    <p className="text-[11px] text-light/40 mt-1 line-clamp-2 md:hidden">
+                      {film.description}
+                    </p>
                     <div className="flex items-center gap-3 mt-2 text-xs text-light/60">
                       <span className="text-cyan font-semibold">{film.rating}</span>
                       <span>{film.length}</span>
                     </div>
+                  </div>
+                  {/* Hover description overlay (desktop) */}
+                  <div className="absolute inset-0 bg-navy/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:flex flex-col justify-center p-5">
+                    <span className="text-[10px] text-cyan font-semibold uppercase tracking-wider mb-1">
+                      {film.genre}
+                    </span>
+                    <h3 className="font-heading text-base font-bold mb-3">{film.title}</h3>
+                    <p className="text-sm text-light/60 leading-relaxed line-clamp-6">
+                      {film.description}
+                    </p>
                   </div>
                 </a>
               ))}
