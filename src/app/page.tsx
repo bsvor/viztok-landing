@@ -537,25 +537,25 @@ export default function Home() {
             Simple <span className="text-cyan">Pricing</span>
           </h2>
           <p className="text-light/60 text-lg mb-12">
-            Free to watch. Upgrade for more. Directors always upload free.
+            Free to watch. Upgrade for more. Directors earn from every view.
           </p>
           <div className="grid md:grid-cols-4 gap-6">
             {[
               {
                 name: "Director",
-                price: "$0",
-                period: "/forever",
-                description: "Upload and earn — always free for directors",
+                price: "Earn",
+                period: "",
+                description: "Your share of ticket sales, every view",
                 features: [
                   "Upload AI-generated content",
-                  "Revenue sharing from subs",
+                  "Earn from every subscriber view",
                   "AI quality scoring",
-                  "Director analytics",
+                  "Director analytics dashboard",
                   "Build series & seasons",
                 ],
                 cta: "Start Creating",
                 highlighted: true,
-                badge: "FREE",
+                badge: "REVENUE SHARE",
               },
               {
                 name: "Free",
