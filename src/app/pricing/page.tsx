@@ -10,7 +10,7 @@ const tiers = [
     period: "/mo",
     description: "Get started with AI-generated entertainment",
     features: [
-      "5 episodes per week",
+      "1 video per week",
       "720p streaming quality",
       "AI recommendations",
       "Ad-supported viewing",
@@ -64,7 +64,7 @@ const faqs = [
   {
     question: "How does the Free tier work?",
     answer:
-      "The Free tier gives you access to 5 episodes per week at 720p quality with ad-supported viewing. It's a great way to explore the platform before committing to a paid plan.",
+      "The Free tier gives you access to 1 video per week at 720p quality with ad-supported viewing. It's a great way to explore the platform before committing to a paid plan.",
   },
   {
     question: "Is uploading content as a director really free?",
