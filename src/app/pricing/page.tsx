@@ -67,9 +67,9 @@ const faqs = [
       "The Free tier gives you access to 1 video per week at 720p quality with ad-supported viewing. It's a great way to explore the platform before committing to a paid plan.",
   },
   {
-    question: "Is uploading content as a director really free?",
+    question: "How do directors earn money on Viztok?",
     answer:
-      "Absolutely. Directors can upload AI-generated content at no cost. You earn revenue through our subscriber revenue sharing model — the more viewers watch your content, the more you earn.",
+      "Directors earn their share of ticket sales through our revenue sharing model. Every time a subscriber watches your content, you earn a portion of the revenue. The more viewers your films and series attract, the more you earn. There's no upfront cost to upload — you get paid based on performance.",
   },
   {
     question: "What does early access include on the Premium plan?",
@@ -116,7 +116,6 @@ export default function PricingPage() {
         </h1>
         <p className="text-light/60 text-lg max-w-2xl mx-auto">
           From free to premium — pick the plan that fits how you watch.
-          Directors always upload for free.
         </p>
       </section>
 
@@ -188,10 +187,10 @@ export default function PricingPage() {
         </div>
 
         {/* Director callout */}
-        <div className="max-w-6xl mx-auto mt-12 text-center">
-          <div className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-cyan/5 border border-cyan/20">
+        <div className="max-w-3xl mx-auto mt-16 rounded-2xl bg-cyan/5 border border-cyan/20 p-8 text-center">
+          <div className="w-14 h-14 rounded-full bg-cyan/10 flex items-center justify-center mx-auto mb-4">
             <svg
-              className="w-5 h-5 text-cyan"
+              className="w-7 h-7 text-cyan"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -200,17 +199,28 @@ export default function PricingPage() {
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
+                d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
               />
             </svg>
-            <span className="text-sm text-light/70">
-              Want to upload content?{" "}
-              <span className="text-cyan font-semibold">
-                Creating is always free
-              </span>{" "}
-              — earn revenue from viewer subscriptions.
-            </span>
           </div>
+          <h3 className="text-2xl font-heading font-bold mb-2">
+            Are You a <span className="text-cyan">Director</span>?
+          </h3>
+          <p className="text-lg text-light/70 mb-1">
+            Earn your share of ticket sales.
+          </p>
+          <p className="text-sm text-light/50 max-w-lg mx-auto mb-6">
+            Upload your AI-generated films and series to Viztok. Every time a subscriber watches your content, you earn a share of the revenue. The more viewers, the more you earn.
+          </p>
+          <a
+            href="https://app.viztok.com/signup"
+            className="inline-flex items-center gap-2 bg-cyan text-navy font-semibold px-6 py-3 rounded-lg hover:bg-cyan/90 transition-colors"
+          >
+            Start Creating
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </a>
         </div>
       </section>
 
