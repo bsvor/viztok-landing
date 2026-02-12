@@ -64,13 +64,14 @@ export default function Home() {
         {/* Mock Video Grid Preview */}
         <div className="max-w-6xl mx-auto mt-16 grid grid-cols-2 md:grid-cols-4 gap-3">
           {[
-            { title: "Neon Drift", genre: "Sci-Fi", rating: "9.2" },
-            { title: "The Last Signal", genre: "Thriller", rating: "8.7" },
-            { title: "Pixel Hearts", genre: "Romance", rating: "8.9" },
-            { title: "Void Walker", genre: "Mystery", rating: "9.0" },
+            { id: "1", title: "Neon Drift", genre: "Sci-Fi", rating: "9.2" },
+            { id: "2", title: "The Last Signal", genre: "Thriller", rating: "8.7" },
+            { id: "3", title: "Pixel Hearts", genre: "Romance", rating: "8.9" },
+            { id: "4", title: "Void Walker", genre: "Mystery", rating: "9.0" },
           ].map((show) => (
-            <div
+            <a
               key={show.title}
+              href={`https://app.viztok.com/watch/${show.id}`}
               className="relative group rounded-xl overflow-hidden bg-gradient-to-br from-teal/20 to-navy border border-white/10 aspect-[2/3] flex flex-col justify-end p-4 hover:border-cyan/50 transition-colors cursor-pointer"
             >
               <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/50 to-transparent" />
@@ -86,7 +87,7 @@ export default function Home() {
                   <span>AI Rated</span>
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </section>
@@ -468,13 +469,14 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               {[
-                { title: "The Algorithm", genre: "Sci-Fi", length: "1h 42m", rating: "9.4" },
-                { title: "Echoes of Tomorrow", genre: "Drama", length: "1h 28m", rating: "9.1" },
-                { title: "Signal Lost", genre: "Thriller", length: "1h 55m", rating: "8.8" },
-                { title: "The Dreaming City", genre: "Fantasy", length: "2h 10m", rating: "9.3" },
+                { id: "5", title: "The Algorithm", genre: "Sci-Fi", length: "1h 42m", rating: "9.4" },
+                { id: "6", title: "Echoes of Tomorrow", genre: "Drama", length: "1h 28m", rating: "9.1" },
+                { id: "7", title: "Signal Lost", genre: "Thriller", length: "1h 55m", rating: "8.8" },
+                { id: "8", title: "The Dreaming City", genre: "Fantasy", length: "2h 10m", rating: "9.3" },
               ].map((film) => (
-                <div
+                <a
                   key={film.title}
+                  href={`https://app.viztok.com/watch/${film.id}`}
                   className="relative rounded-xl overflow-hidden bg-gradient-to-br from-teal/20 to-navy border border-white/10 aspect-[3/4] flex flex-col justify-end p-4 hover:border-cyan/50 transition-colors cursor-pointer"
                 >
                   <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/60 to-transparent" />
@@ -490,7 +492,7 @@ export default function Home() {
                       <span>{film.length}</span>
                     </div>
                   </div>
-                </div>
+                </a>
               ))}
             </div>
           </div>
