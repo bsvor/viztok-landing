@@ -25,12 +25,12 @@ export default function Home() {
             </Link>
           </div>
           <div className="flex items-center gap-4">
-            <button className="text-sm hover:text-cyan transition-colors">
+            <a href="https://app.viztok.com/login" className="text-sm hover:text-cyan transition-colors">
               Sign In
-            </button>
-            <button className="bg-cyan text-navy font-semibold text-sm px-5 py-2.5 rounded-lg hover:bg-cyan/90 transition-colors">
+            </a>
+            <a href="https://app.viztok.com/signup" className="bg-cyan text-navy font-semibold text-sm px-5 py-2.5 rounded-lg hover:bg-cyan/90 transition-colors">
               Join Waitlist
-            </button>
+            </a>
           </div>
         </div>
       </nav>
@@ -52,12 +52,12 @@ export default function Home() {
             like you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-cyan text-navy font-semibold px-8 py-4 rounded-lg text-lg hover:bg-cyan/90 transition-colors">
+            <a href="https://app.viztok.com/signup" className="bg-cyan text-navy font-semibold px-8 py-4 rounded-lg text-lg hover:bg-cyan/90 transition-colors text-center">
               Join the Waitlist
-            </button>
-            <button className="border border-light/20 text-light px-8 py-4 rounded-lg text-lg hover:border-cyan hover:text-cyan transition-colors">
+            </a>
+            <a href="#how-it-works" className="border border-light/20 text-light px-8 py-4 rounded-lg text-lg hover:border-cyan hover:text-cyan transition-colors text-center">
               Learn More
-            </button>
+            </a>
           </div>
         </div>
 
@@ -533,7 +533,7 @@ export default function Home() {
                 period: "/mo",
                 description: "Get started with AI entertainment",
                 features: [
-                  "5 episodes per week",
+                  "1 video per week",
                   "720p streaming",
                   "AI recommendations",
                   "Ad-supported",
@@ -627,15 +627,16 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
-                <button
-                  className={`w-full font-semibold py-3 rounded-lg transition-colors ${
+                <a
+                  href="https://app.viztok.com/signup"
+                  className={`w-full font-semibold py-3 rounded-lg transition-colors text-center block ${
                     tier.highlighted
                       ? "bg-cyan text-navy hover:bg-cyan/90"
                       : "border border-cyan text-cyan hover:bg-cyan hover:text-navy"
                   }`}
                 >
                   {tier.cta}
-                </button>
+                </a>
               </div>
             ))}
           </div>
@@ -663,14 +664,12 @@ export default function Home() {
             for early access today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-5 py-4 rounded-lg bg-white/5 border border-white/10 text-light placeholder:text-light/30 focus:outline-none focus:border-cyan transition-colors"
-            />
-            <button className="bg-cyan text-navy font-semibold px-8 py-4 rounded-lg hover:bg-cyan/90 transition-colors whitespace-nowrap">
-              Join Waitlist
-            </button>
+            <a
+              href="https://app.viztok.com/signup"
+              className="bg-cyan text-navy font-semibold px-8 py-4 rounded-lg hover:bg-cyan/90 transition-colors whitespace-nowrap text-center"
+            >
+              Sign Up Free
+            </a>
           </div>
         </div>
       </section>
